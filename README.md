@@ -33,3 +33,17 @@ This repository is divided to branches that correspond to the blog post sections
 ### Reflection
 
 This experiment demonstrates a web-based chat application built using Rust, Yew, WebAssembly, and WebSocket communication. The application successfully supports routing, shared context state, and real-time message exchange between users through a WebSocket server. The original tutorial uses several outdated dependencies and APIs, therefore some compatibility adjustments were required, including updates to `wasm-bindgen`, `bootstrap.js`, and the webpack build scripts. After these modifications, the project compiled and executed correctly on a modern Rust and Node.js environment. This experiment helped me understand how Yew integrates frontend components, routing, asynchronous communication, and shared state management in a Rust WebAssembly application.
+
+## Experiment 3.2: Be Creative!
+
+### Screenshots
+
+#### Landing Page
+![Feminine Landing Page](assets/images/experiment3-2-login.png)
+
+#### Chat Page
+![Feminine Chat Page](assets/images/experiment3-2-chat.png)
+
+### Reflection
+
+In this experiment, I redesigned the webchat interface using a pink pastel theme with custom branding and personalized UI elements. The landing page now includes a meme GIF, gradient background, rounded card layout, and a personalized message addressed to the teaching assistant. I also customized the chat interface using pink color palettes while preserving the original WebSocket communication and routing functionality. These changes were implemented using TailwindCSS styling directly inside the Yew components and the main HTML template. This experiment helped me understand how frontend customization in Yew can improve user experience without changing the underlying application architecture.
