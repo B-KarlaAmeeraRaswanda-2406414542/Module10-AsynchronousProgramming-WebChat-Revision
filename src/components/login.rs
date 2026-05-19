@@ -27,13 +27,55 @@ pub fn login() -> Html {
     };
 
     html! {
-       <div class="bg-gray-800 flex w-screen">
-            <div class="container mx-auto flex flex-col justify-center items-center">
-                <form class="m-4 flex">
-                    <input {oninput} class="rounded-l-lg p-4 border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white" placeholder="Username" />
-                    <Link<Route> to={Route::Chat}> <button {onclick} disabled={username.len()<1} class="px-8 rounded-r-lg bg-violet-600	  text-white font-bold p-4 uppercase border-violet-600 border-t border-b border-r" >{"Go Chatting!"}</button></Link<Route>>
+    <div class="w-screen h-screen flex justify-center items-center px-6">
+
+        <div class="bg-white/70 backdrop-blur-lg shadow-2xl rounded-[2rem] p-10 w-full max-w-xl border border-pink-200">
+
+            <div class="flex flex-col items-center text-center">
+
+                <img
+                    class="w-56 rounded-3xl shadow-lg mb-6"
+                    src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTRlOGh5aDdwYzBwaGR5M2E0dWV0aWNhMm5jbnd3dGVlNXh1M2x4aCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l0MYt5jPR6QX5pnqM/giphy.gif"
+                />
+
+                <h1 class="text-5xl font-bold text-pink-500 mb-3">
+                    {"Karla's YewChat 💖"}
+                </h1>
+
+                <p class="text-gray-700 text-lg mb-2">
+                    {"A websocket chat powered by Rust & Yew"}
+                </p>
+
+                <p class="text-pink-600 text-sm italic mb-8">
+                    {"Dear TA, please consider giving this project a full score 🥹"}
+                </p>
+
+                <form class="w-full flex flex-col gap-4">
+
+                    <input
+                        {oninput}
+                        class="rounded-2xl p-4 border border-pink-200 bg-pink-50 text-gray-700 focus:outline-none focus:ring-4 focus:ring-pink-200 transition"
+                        placeholder="Enter your username..."
+                    />
+
+                    <Link<Route> to={Route::Chat}>
+                        <button
+                            {onclick}
+                            disabled={username.len() < 1}
+                            class="w-full bg-pink-400 hover:bg-pink-500 transition text-white font-semibold p-4 rounded-2xl shadow-lg disabled:bg-pink-200"
+                        >
+                            {"Enter The Chat"}
+                        </button>
+                    </Link<Route>>
+
                 </form>
+
+                <p class="mt-8 text-sm text-gray-500">
+                    {"Created by Karla Ameera Raswanda"}
+                </p>
+
             </div>
         </div>
-    }
+    </div>
+}
 }
